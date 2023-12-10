@@ -1,2 +1,4 @@
 # Context-I2W(AAAI 2024)
-Code and checkpoint will be public after our paper is accepted.
+##TODO 
+1. Inference code and checkpoints
+2. Training code
