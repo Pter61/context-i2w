@@ -1,7 +1,6 @@
 <div align="center">
-
+	
 # Context-I2W: Mapping Images to Context-dependent words for Accurate Zero-Shot Composed Image Retrieval (AAAI 2024)
-
 [![arXiv](https://img.shields.io/badge/arXiv-Context-I2W.svg?logo=arXiv)](https://arxiv.org/abs/2309.16137)
 [![License](https://img.shields.io/badge/License-MIT-green.svg)]()
 [![GitHub Stars](https://img.shields.io/github/stars/Pter61/context-i2w?style=social)](https://github.com/Pter61/context-i2w)
