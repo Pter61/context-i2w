@@ -105,4 +105,4 @@ If you found this repository useful, please consider citing:
 ```
 
 ## Credits
-- Thanks to [Pic2Word](https://github.com/google-research/composed_image_retrieval) authors, zero-shot accuracy code is adapted from there and pre-trained models are used in the command line interface.
+- Thanks to [Pic2Word](https://github.com/google-research/composed_image_retrieval) authors, our baseline code adapted from there.
