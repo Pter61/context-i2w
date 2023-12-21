@@ -31,3 +31,81 @@ This repository contains the code for the paper ["Context-I2W: Mapping Images to
 ## TODO 
 1. Inference code and checkpoints
 2. Training code
+<<<<<<< HEAD
+=======
+
+## Data
+
+### Training Data
+We utilize [Conceptual Captions URLs](https://ai.google.com/research/ConceptualCaptions/download) to train a model. 
+See [open_clip](https://github.com/mlfoundations/open_clip) to see the process of getting the dataset. 
+
+The training data directory has to be in the root of this repo, and should be structured like below.
+```bash
+  cc_data
+    ├── train ## training image diretories.
+    └── val ## validation image directories.
+  cc
+    ├── Train_GCC-training_output.csv ## training data list
+    └── Validation_GCC-1.1.0-Validation_output.csv ## validation data list
+```
+
+### Test Data
+See [README](data/README.md) to prepare test dataset.
+
+### Pre-trained model
+The model is available in [GoogleDrive](https://drive.google.com/file/d/1yHv9SgY1-2KrAvd2MmFqH40x4P3gLotQ/view?usp=drive_link).
+
+## Training
+
+### Install dependencies
+See [open_clip] for the details of installation. 
+The same environment should be usable in this repo.
+setenv.sh is the script we used to set-up the environment in virtualenv. 
+
+Also run below to add directory to pythonpath:
+```bash
+. env3/bin/activate
+export PYTHONPATH="$PYTHONPATH:$PWD/src"
+export PYTHONWARNINGS='ignore:semaphore_tracker:UserWarning'
+```
+
+### Sample evaluation only:
+
+Evaluation on COCO, ImageNet, or CIRR.
+```bash
+python src/eval_retrieval.py \
+    --openai-pretrained \
+    --resume /path/to/checkpoints \
+    --eval-mode $data_name \ ## replace with coco, imgnet, or cirr
+    --gpu $gpu_id
+```
+
+Evaluation on fashion-iq (shirt or dress or toptee)
+```bash
+python src/eval_retrieval.py \
+    --openai-pretrained \
+    --resume /path/to/checkpoints \
+    --eval-mode fashion \
+    --source $cloth_type \ ## replace with shirt or dress or toptee
+    --gpu $gpu_id
+```
+
+## Citing
+
+If you found this repository useful, please consider citing:
+
+```bibtex
+@misc{tang2023contexti2w,
+      title={Context-I2W: Mapping Images to Context-dependent Words for Accurate Zero-Shot Composed Image Retrieval}, 
+      author={Yuanmin Tang and Jing Yu and Keke Gai and Jiamin Zhuang and Gang Xiong and Yue Hu and Qi Wu},
+      year={2023},
+      eprint={2309.16137},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}
+```
+
+## Credits
+- Thanks to [Pic2Word](https://github.com/google-research/composed_image_retrieval) authors, zero-shot accuracy code is adapted from there and pre-trained models are used in the command line interface.
+>>>>>>> 448835d (update)
