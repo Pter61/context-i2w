@@ -57,7 +57,7 @@ The model is available in [GoogleDrive](https://drive.google.com/file/d/1yHv9SgY
 ## Training
 
 ### Install dependencies
-See [open_clip] for the details of installation. 
+See [open_clip](https://github.com/mlfoundations/open_clip)  for the details of installation. 
 The same environment should be usable in this repo.
 setenv.sh is the script we used to set-up the environment in virtualenv. 
 
