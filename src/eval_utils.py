@@ -302,9 +302,6 @@ def evaluate_coco(model, img2text, args, loader):
             all_mixture_features.append(mixture_features.cpu())                        
             all_composed_features_with_class.append(composed_feature_with_class.cpu())            
 
-        # torch.save(all_filenames, "../CIR_change_OWM_attention_5_enhance/data/coco/val_tmp/all_filenames.pth")
-        # torch.save(all_text_with_queryclass_origin, "../CIR_change_OWM_attention_5_enhance/data/coco/val_tmp/all_text_with_queryclass_origin.pth")
-
         metric_func = partial(get_metrics_coco, 
                 image_features=torch.cat(all_image_features), 
                 logit_scale=logit_scale,
