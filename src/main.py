@@ -28,7 +28,7 @@ from torch.cuda.amp import GradScaler
 from third_party.open_clip.scheduler import cosine_lr
 from model.clip import _transform, load
 from model.model import convert_weights, CLIP, IM2TEXT, IM2TEXT_OWM, IM2TEXT_OWM_Attn
-from trainer import train, enhance
+from trainer import train
 from data import get_data
 from params import parse_args
 from logger import setup_primary_logging, setup_worker_logging
@@ -217,8 +217,6 @@ def main_worker(gpu, ngpus_per_node, log_queue, args):
     for epoch in range(start_epoch, args.epochs):
         if args.gpu == 0:
             logging.info(f'Start epoch {epoch}')
-        if args.dataset_type == "enhance":
-            enhance(model, img2text, data, epoch, optimizer, scaler, scheduler, args, writer)
         else:
             train(model, img2text, data, epoch, optimizer, scaler, scheduler, args, writer)
         steps = data["train"].dataloader.num_batches * (epoch + 1)        
