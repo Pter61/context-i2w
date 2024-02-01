@@ -24,7 +24,7 @@ data
                   .
                   . 
 ```
-See ImageNet-R to download the dataset.
+See [ImageNet-R](https://github.com/hendrycks/imagenet-r) to download the dataset.
 
 ### COCO
 ```bash
@@ -51,7 +51,7 @@ cirr
   └── image_splits
         └──split.rc2.val.json
 ```
-Download the images following instruction on CIRR.
+Download the images following instruction on [CIRR](https://github.com/Cuberick-Orion/CIRR).
 
 ### Fashion-IQ
 
@@ -67,6 +67,8 @@ fashion-iq
         └── split.toptee.val.json
     └── images ## images under this directory.
 ```
+Json files are available in https://github.com/XiaoxiaoGuo/fashion-iq. 
+Images are downloaded from https://github.com/postBG/CosMo.pytorch. 
 
 
 
