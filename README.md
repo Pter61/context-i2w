@@ -94,13 +94,14 @@ python src/eval_retrieval.py \
 If you found this repository useful, please consider citing:
 
 ```bibtex
-@misc{tang2023contexti2w,
-      title={Context-I2W: Mapping Images to Context-dependent Words for Accurate Zero-Shot Composed Image Retrieval}, 
-      author={Yuanmin Tang and Jing Yu and Keke Gai and Jiamin Zhuang and Gang Xiong and Yue Hu and Qi Wu},
-      year={2023},
-      eprint={2309.16137},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@inproceedings{tang2024context,
+  title={Context-I2W: Mapping Images to Context-dependent Words for Accurate Zero-Shot Composed Image Retrieval},
+  author={Tang, Yuanmin and Yu, Jing and Gai, Keke and Zhuang, Jiamin and Xiong, Gang and Hu, Yue and Wu, Qi},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={38},
+  number={6},
+  pages={5180--5188},
+  year={2024}
 }
 ```
 
