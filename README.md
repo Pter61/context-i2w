@@ -28,10 +28,6 @@ This repository contains the code for the paper ["Context-I2W: Mapping Images to
 2.  Our Intent View Selector and Visual Target Extractor selectively **map images dependent on the context of manipulation descriptions**, enhancing the ability of the CLIP Language Encoder to generalize images to complex manipulation descriptions effectively.
 3.  Our Context-I2W is **the first to mask the object name while retaining the original caption in CIR tasks**. It builds on the insight that context clues should be paid more attention to in the objective, which is an interesting insight that will motivate future works.
    
-## TODO 
-1. ~~Inference code and checkpoints~~
-2. Training code
-
 ## Data
 
 ### Training Data
