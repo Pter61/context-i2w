@@ -44,6 +44,12 @@ The training data directory has to be in the root of this repo, and should be st
     └── Validation_GCC-1.1.0-Validation_output.csv ## validation data list
 ```
 
+To process the CC3M dataset, you first need to confirm that the download type is in folder form. Here is the example of my download command: 
+`img2dataset --url_list Train_GCC-training.tsv --input_format "tsv"\
+         --url_col "url" --caption_col "caption" --output_format webdataset\
+           --output_folder /tym/datasets/cc_3M/train/ --processes_count 16 --thread_count 64 --image_size 256\
+             --enable_wandb True`
+
 ### Test Data
 See [README](data/README.md) to prepare test dataset.
 
